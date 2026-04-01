@@ -1,0 +1,174 @@
+/* ===== ENROLLMENT CSS (Dashboard Style) ===== */
+
+.group-section {
+  margin-bottom: 64px;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+}
+
+.group-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.group-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--border-radius-large);
+  border: 1px solid var(--border-subtle);
+  background: #fff;
+}
+
+.enrollment-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.enrollment-table th {
+  background: var(--bg-secondary);
+  padding: 16px 24px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.enrollment-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+  position: relative;
+}
+
+.enrollment-table td[contenteditable="true"]:hover {
+  background: rgba(0, 113, 227, 0.02);
+  cursor: text;
+}
+
+.enrollment-table td[contenteditable="true"]:focus {
+  outline: 2px solid var(--accent);
+  background: #fff;
+  z-index: 2;
+}
+
+/* Status Sync Styles */
+.status-cell {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-cell.status-booked { color: #8a6d3b; background: #fff9e6 !important; }
+.status-cell.status-partial { color: #0071e3; background: #e1f5ff !important; }
+.status-cell.status-paid { color: #2e7d32; background: #e8f5e9 !important; }
+
+/* Dashboard Buttons */
+.group-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-dashboard {
+  padding: 8px 16px;
+  border-radius: 980px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-add {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.btn-add:hover {
+  background: #e8e8ed;
+}
+
+.btn-save {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-save:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background: #ffe5e5;
+  color: #ff3b30;
+}
+
+.enrollment-table tr:last-child td {
+  border-bottom: none;
+}
+
+.empty-row td {
+  text-align: center;
+  padding: 48px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.status-legend {
+  margin-top: 80px;
+  padding: 40px;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-large);
+}
+
+.legend-item {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.legend-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Back Link Adjustments */
+.navbar .btn-secondary {
+  font-size: 0.9rem;
+}
+
+.page-header {
+  padding-top: 120px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .enrollment-table th, .enrollment-table td {
+    padding: 14px 16px;
+    font-size: 0.85rem;
+  }
+}

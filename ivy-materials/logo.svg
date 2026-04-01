@@ -1,0 +1,22 @@
+<svg width="115" height="32" viewBox="0 0 115 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-text {
+        font-family: 'Inter', -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 26px;
+        fill: #1D1D1F;
+        letter-spacing: -0.04em;
+      }
+    </style>
+  </defs>
+  
+  <!-- i stem -->
+  <rect x="2" y="10.5" width="5.5" height="18.5" fill="#1D1D1F" />
+  
+  <!-- custom red dot -->
+  <circle cx="4.75" cy="4.5" r="3.5" fill="#FF3B30" />
+  
+  <!-- rest of the text -->
+  <text x="11" y="29" class="logo-text">mpact</text>
+</svg>

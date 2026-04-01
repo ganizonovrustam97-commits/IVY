@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrollment Dashboard | Ivy Materials</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enrollment.css">
+</head>
+<body class="enrollment-page">
+
+  <!-- Minimal Nav -->
+  <nav class="navbar scrolled">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">
+        <span class="logo-accent">Ivy</span> Materials
+      </a>
+      <a href="index.html" class="btn-secondary">← На главную</a>
+    </div>
+  </nav>
+
+  <main class="container page-content">
+    <header class="page-header">
+      <h1 class="section-title">Таблица набора</h1>
+      <p class="section-subtitle">Мониторинг статусов групп и оплат.</p>
+    </header>
+
+    <div class="enrollment-dashboard" id="enrollment-dashboard">
+      <!-- Tables will be dynamically rendered here -->
+    </div>
+
+    <!-- Dashboard Controls Template -->
+    <template id="group-template">
+      <section class="group-section" data-group-id="">
+        <div class="group-header">
+          <h2 class="group-name">Группа</h2>
+          <div class="group-actions">
+            <button class="btn-dashboard btn-add" onclick="addRow(this)">+ Добавить</button>
+            <button class="btn-dashboard btn-save" onclick="saveData()">💾 Сохранить</button>
+          </div>
+        </div>
+        <div class="table-container">
+          <table class="enrollment-table">
+            <thead>
+              <tr>
+                <th>Имя</th>
+                <th>Проект</th>
+                <th>Статус</th>
+                <th>Комментарий</th>
+                <th width="50"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows will be added here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </template>
+
+    <!-- Status Legend -->
+    <div class="status-legend">
+      <div class="legend-item"><span class="status-badge status-booked">Забронировано</span> — закреплено</div>
+      <div class="legend-item"><span class="status-badge status-partial">Оплачено частично</span> — депозит</div>
+      <div class="legend-item"><span class="status-badge status-paid">Оплачено</span> — полный взнос</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Admin Dashboard. Конфиденциально.</p>
+    </div>
+  </footer>
+
+  <script>
+    const STORAGE_KEY = 'ivy_enrollment_data';
+    const groupNames = ["Группа 1", "Группа 2", "Группа 3"];
+
+    function initDashboard() {
+      const container = document.getElementById('enrollment-dashboard');
+      const template = document.getElementById('group-template');
+      const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+
+      groupNames.forEach((name, index) => {
+        const clone = template.content.cloneNode(true);
+        const section = clone.querySelector('section');
+        section.setAttribute('data-group-id', index);
+        section.querySelector('.group-name').textContent = name;
+
+        const tbody = section.querySelector('tbody');
+        const students = savedData[index] || [];
+        
+        if (students.length === 0) {
+          addEmptyRow(tbody);
+        } else {
+          students.forEach(student => addRowToTable(tbody, student));
+        }
+        
+        container.appendChild(clone);
+      });
+    }
+
+    function addRow(btn) {
+      const tbody = btn.closest('section').querySelector('tbody');
+      const emptyRow = tbody.querySelector('.empty-row');
+      if (emptyRow) emptyRow.remove();
+      addRowToTable(tbody);
+    }
+
+    function addEmptyRow(tbody) {
+      tbody.innerHTML = `<tr class="empty-row"><td colspan="5">Нет данных (нажмите «Добавить»)</td></tr>`;
+    }
+
+    function addRowToTable(tbody, data = { name: '', project: '', status: '', comment: '' }) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td contenteditable="true" data-field="name">${data.name}</td>
+        <td contenteditable="true" data-field="project">${data.project}</td>
+        <td contenteditable="true" data-field="status" oninput="updateStatusStyles(this)">${data.status}</td>
+        <td contenteditable="true" data-field="comment">${data.comment}</td>
+        <td><button class="btn-delete" onclick="deleteRow(this)">×</button></td>
+      `;
+      tbody.appendChild(tr);
+      // Initial status styling
+      updateStatusStyles(tr.querySelector('[data-field="status"]'));
+    }
+
+    function deleteRow(btn) {
+      if (confirm('Удалить строку?')) {
+        const tr = btn.closest('tr');
+        const tbody = tr.parentElement;
+        tr.remove();
+        if (tbody.children.length === 0) addEmptyRow(tbody);
+        saveData();
+      }
+    }
+
+    function updateStatusStyles(el) {
+      const text = el.textContent.trim().toLowerCase();
+      el.className = 'status-cell';
+      if (text.includes('оплачено') && !text.includes('частично')) el.classList.add('status-paid');
+      else if (text.includes('частично')) el.classList.add('status-partial');
+      else if (text.includes('забронировали') || text.includes('бронь')) el.classList.add('status-booked');
+    }
+
+    function saveData() {
+      const dashboard = {};
+      document.querySelectorAll('.group-section').forEach(section => {
+        const id = section.getAttribute('data-group-id');
+        const rows = [];
+        section.querySelectorAll('tbody tr:not(.empty-row)').forEach(tr => {
+          rows.push({
+            name: tr.querySelector('[data-field="name"]').textContent,
+            project: tr.querySelector('[data-field="project"]').textContent,
+            status: tr.querySelector('[data-field="status"]').textContent,
+            comment: tr.querySelector('[data-field="comment"]').textContent
+          });
+        });
+        dashboard[id] = rows;
+      });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(dashboard));
+      alert('Данные сохранены локально в этом браузере!');
+    }
+
+    document.addEventListener('DOMContentLoaded', initDashboard);
+  </script>
+</body>
+</html>
