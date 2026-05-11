@@ -1074,7 +1074,6 @@ ul, ol {
     transform: perspective(900px) rotateX(28deg) translateY(0px);
     filter: drop-shadow(0 0 20px rgba(0,113,227,0.25)) drop-shadow(0 30px 60px rgba(0,0,0,0.8));
   }
-}
 
 }
 
