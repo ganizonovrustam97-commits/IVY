@@ -1043,25 +1043,39 @@ ul, ol {
   justify-content: center;
   padding: 16px 0 24px;
 }
-
 .macbook-img-new {
   width: 100%;
   max-width: 340px;
   filter:
     drop-shadow(0 0 40px rgba(0,113,227,0.45))
     drop-shadow(0 40px 80px rgba(0,0,0,0.7));
-  animation: macbook-float 5s ease-in-out infinite;
+  animation: macbook-open 6s ease-in-out infinite;
+  transform-origin: center bottom;
 }
 
-@keyframes macbook-float {
-  0%   { transform: translateY(0px) rotate(-0.8deg);
-         filter: drop-shadow(0 0 30px rgba(0,113,227,0.35)) drop-shadow(0 40px 80px rgba(0,0,0,0.7)); }
-  30%  { transform: translateY(-14px) rotate(0.3deg);
-         filter: drop-shadow(0 0 55px rgba(0,113,227,0.6)) drop-shadow(0 55px 100px rgba(0,0,0,0.65)); }
-  65%  { transform: translateY(-7px) rotate(0.8deg);
-         filter: drop-shadow(0 0 45px rgba(90,200,250,0.45)) drop-shadow(0 48px 90px rgba(0,0,0,0.68)); }
-  100% { transform: translateY(0px) rotate(-0.8deg);
-         filter: drop-shadow(0 0 30px rgba(0,113,227,0.35)) drop-shadow(0 40px 80px rgba(0,0,0,0.7)); }
+@keyframes macbook-open {
+  0%   {
+    transform: perspective(900px) rotateX(28deg) translateY(0px);
+    filter: drop-shadow(0 0 20px rgba(0,113,227,0.25)) drop-shadow(0 30px 60px rgba(0,0,0,0.8));
+  }
+  30%  {
+    transform: perspective(900px) rotateX(8deg) translateY(-16px);
+    filter: drop-shadow(0 0 50px rgba(0,113,227,0.55)) drop-shadow(0 50px 90px rgba(0,0,0,0.65));
+  }
+  55%  {
+    transform: perspective(900px) rotateX(0deg) translateY(-22px);
+    filter: drop-shadow(0 0 65px rgba(90,200,250,0.65)) drop-shadow(0 60px 100px rgba(0,0,0,0.6));
+  }
+  80%  {
+    transform: perspective(900px) rotateX(8deg) translateY(-12px);
+    filter: drop-shadow(0 0 45px rgba(0,113,227,0.45)) drop-shadow(0 48px 85px rgba(0,0,0,0.68));
+  }
+  100% {
+    transform: perspective(900px) rotateX(28deg) translateY(0px);
+    filter: drop-shadow(0 0 20px rgba(0,113,227,0.25)) drop-shadow(0 30px 60px rgba(0,0,0,0.8));
+  }
+}
+
 }
 
 .prize-content-new h3 {
