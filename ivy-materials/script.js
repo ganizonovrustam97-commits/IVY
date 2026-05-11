@@ -23,10 +23,7 @@
     const presaleElements = document.querySelectorAll('.presale-only');
 
     if (!isPresaleActive()) {
-      // Hide all pre-sale elements
       presaleElements.forEach(el => el.classList.add('hidden'));
-
-      // Update price to full price
       const priceEl = document.getElementById('offer-price-value');
       if (priceEl) priceEl.textContent = FULL_PRICE;
     }
@@ -53,9 +50,7 @@
 
     const pad = (n) => String(n).padStart(2, '0');
 
-    // Hero timer
     setTimerValues('hero', pad(days), pad(hours), pad(minutes), pad(seconds));
-    // Offer timer
     setTimerValues('offer', pad(days), pad(hours), pad(minutes), pad(seconds));
   }
 
@@ -101,7 +96,6 @@
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     });
 
-    // Close menu on link click
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -133,7 +127,37 @@
     reveals.forEach(el => observer.observe(el));
   }
 
+  // ==========================================
+  // 6. PRIZE COUNTER ANIMATION
+  // ==========================================
+  function initPrizeCounter() {
+    const counters = document.querySelectorAll('.amount-counter');
+    if (!counters.length) return;
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.target, 10);
+        const duration = 1800;
+        const start = performance.now();
+
+        function tick(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target).toLocaleString('en-US');
+          if (progress < 1) requestAnimationFrame(tick);
+          else el.textContent = target.toLocaleString('en-US');
+        }
+
+        requestAnimationFrame(tick);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+
+    counters.forEach(el => observer.observe(el));
+  }
 
   // ==========================================
   // 7. FLOATING CTA
@@ -164,7 +188,7 @@
         if (!target) return;
 
         e.preventDefault();
-        const offset = 60; // Approximate navbar height
+        const offset = 60;
         const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
         window.scrollTo({
@@ -194,7 +218,6 @@
 
         e.preventDefault();
         
-        // Inject iframe
         iframeContainer.innerHTML = `
           <iframe 
             src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1" 
@@ -213,16 +236,14 @@
     const closeModal = () => {
       modal.classList.remove('active');
       document.body.style.overflow = '';
-      // Destroy iframe to stop video
       setTimeout(() => {
         iframeContainer.innerHTML = '';
-      }, 400); // Wait for transition
+      }, 400);
     };
 
     if (overlay) overlay.addEventListener('click', closeModal);
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
 
-    // Close on Escape key
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modal.classList.contains('active')) {
         closeModal();
@@ -244,6 +265,7 @@
     initNavbar();
     initMobileMenu();
     initRevealAnimations();
+    initPrizeCounter();
     initFloatingCta();
     initSmoothScroll();
     initVideoModal();
