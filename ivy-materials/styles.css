@@ -212,9 +212,7 @@ ul, ol {
 }
 
 .nav-cta {
-  <video class="macbook-img-new" autoplay loop muted playsinline>
-  <source src="macbook_prize.mp4" type="video/mp4">
-</video>
+    padding: 8px 16px !important;
   background: var(--text-primary) !important;
   color: #fff !important;
   border-radius: 980px;
@@ -1140,19 +1138,24 @@ ul, ol {
   color: rgba(255,255,255,0.38);
 }
 
-/* University card */
-.prize-uni {
-  background: linear-gradient(160deg, #00091c 0%, #00050f 100%);
-  border-color: rgba(0,113,227,0.08);
+.prize-visual-new {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0 24px;
 }
 
-.prize-uni:hover {
-  border-color: rgba(0,113,227,0.4);
-  box-shadow: 0 24px 60px rgba(0,113,227,0.1);
+.macbook-img-new {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 12px;
+  filter:
+    drop-shadow(0 0 40px rgba(0,113,227,0.45))
+    drop-shadow(0 40px 80px rgba(0,0,0,0.7));
+  display: block;
 }
-
-.prize-uni .orb-blue {
-  top: -80px;
   right: -80px;
   background: radial-gradient(circle, #0071e3 0%, #bf5af2 60%, transparent 70%);
   opacity: 0.18;
