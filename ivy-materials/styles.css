@@ -212,7 +212,9 @@ ul, ol {
 }
 
 .nav-cta {
-  padding: 8px 16px !important;
+  <video class="macbook-img-new" autoplay loop muted playsinline>
+  <source src="macbook_prize.mp4" type="video/mp4">
+</video>
   background: var(--text-primary) !important;
   color: #fff !important;
   border-radius: 980px;
