@@ -308,6 +308,12 @@ ul, ol { list-style: none; }
   .offer-card { padding: 48px 24px; }
   .offer-bonuses { grid-template-columns: 1fr; }
 }
+/* ===== COLLABS ===== */
+.collab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; }
+.collab-card { border-radius: var(--border-radius-large); overflow: hidden; border: 1px solid var(--border-subtle); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.collab-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(0,0,0,0.4); border-color: rgba(0,113,227,0.25); }
+.collab-card img { width: 100%; display: block; }
+@media (max-width: 768px) { .collab-grid { grid-template-columns: 1fr; } }
 
 .hidden { display: none !important; }
 
