@@ -327,6 +327,10 @@ ul, ol { list-style: none; }
 .mentor-duo-tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 10px; }
 .mentor-duo-name { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: -0.02em; }
 @media (max-width: 768px) { .mentors-duo { grid-template-columns: 1fr; } .mentor-duo-photo-wrap { height: 260px; } }
+.guest-mentors-banner { display: flex; align-items: flex-start; gap: 20px; margin-top: 24px; padding: 28px 32px; background: rgba(0,113,227,0.05); border: 1px solid rgba(0,113,227,0.15); border-radius: 20px; }
+.guest-mentors-icon { font-size: 1.2rem; color: var(--accent); margin-top: 2px; flex-shrink: 0; }
+.guest-mentors-title { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.guest-mentors-sub { font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
 .hidden { display: none !important; }
 
 .floating-cta { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px); z-index: 1000; transition: transform 0.4s var(--ease-standard); }
