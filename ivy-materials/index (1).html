@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Ivy Materials — Хватит терять 4 года жизни на обучение вслепую</title>
+  <meta name="description" content="Система для подростков. Реальная рутина профессий, практика и навыки выживания в мире с AI. Не совершай фатальную ошибку при поступлении." />
+  <meta name="keywords" content="выбор профессии, профориентация, AI для подростков, осознанность" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ivy Materials — Хватит терять 4 года жизни" />
+  <meta property="og:description" content="4 года впустую на нелюбимом факультете или 12 недель, чтобы протрезветь?" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <div class="logo-wrapper">
+          <img src="logo.svg" alt="Impact Logo" class="logo-img">
+          <span class="logo-subtext">Ivy Materials</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#solution">Суть</a>
+        <a href="#process">Механика</a>
+        <a href="#cases">Инсайты</a>
+        <a href="#program">Программа</a>
+        <a href="#faq">FAQ</a>
+        <a href="#offer" class="nav-cta" id="nav-cta-btn">Не потерять время →</a>
+      </nav>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-presale-badge presale-only reveal" id="hero-presale-badge">
+            Pre-sale открыт до 25 апреля
+          </div>
+
+          <h1 class="hero-title reveal reveal-delay-1">
+            Это не курс.<br>
+            <span class="text-accent">Это отбор лучших.</span>
+          </h1>
+
+          <p class="hero-subtitle reveal reveal-delay-2">
+            12 недель. Жесткий отбор. Лучшие получают инвестиции и гарантию поступления в топ-100 вузов.
+          </p>
+
+          <div class="hero-timer presale-only reveal reveal-delay-3" id="hero-timer">
+            <div class="timer" id="countdown-hero">
+              <div class="timer-unit">
+                <span class="timer-value" id="hero-days">00</span>
+                <span class="timer-label">Дней</span>
+              </div>
+              <div class="timer-unit">
+                <span class="timer-value" id="hero-hours">00</span>
+                <span class="timer-label">Часов</span>
+              </div>
+              <div class="timer-unit">
+                <span class="timer-value" id="hero-minutes">00</span>
+                <span class="timer-label">Минут</span>
+              </div>
+              <div class="timer-unit">
+                <span class="timer-value" id="hero-seconds">00</span>
+                <span class="timer-label">Секунд</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-cta-group reveal reveal-delay-4">
+            <a href="#offer" class="btn-primary" id="hero-cta-primary">
+              Подать заявку на отбор
+            </a>
+            <a href="#process" class="btn-secondary" id="hero-cta-secondary">
+              Узнать механику →
+            </a>
+          </div>
+
+          <div class="hero-stats reveal reveal-delay-5">
+            <div class="hero-stat">
+              <div class="hero-stat-value">100%</div>
+              <div class="hero-stat-label">гарантия финалистам</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value">$2,000</div>
+              <div class="hero-stat-label">инвестиции в проект</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-value">20</div>
+              <div class="hero-stat-label">мест в потоке</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="solution section" id="solution">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-badge">Экосистема</div>
+          <h2 class="section-title">
+            Шанс попасть<br>в сильную среду.
+          </h2>
+          <p class="section-subtitle centered">
+            Отбираем амбициозных, прокачиваем проекты, открываем путь в топ-университеты.
+          </p>
+        </div>
+
+        <div class="solution-grid">
+          <div class="solution-features">
+            <div class="solution-feature reveal reveal-delay-1">
+              <h4>Жесткий отсев</h4>
+              <p>Только практика. Никакой теории ради теории. Выживают проекты с реальным impact.</p>
+            </div>
+            <div class="solution-feature reveal reveal-delay-2">
+              <h4>Гарантия для лучших</h4>
+              <p>Топ-выпускники получают полное сопровождение до зачисления в топ-100 вузов.</p>
+            </div>
+            <div class="solution-feature reveal reveal-delay-3">
+              <h4>Реальные ресурсы</h4>
+              <p>Доступ к закрытым партнерским программам, менторам и первым инвестициям.</p>
+            </div>
+          </div>
+
+          <div class="solution-visual reveal">
+            <div class="solution-card">
+              <h3>Твой результат отбора:</h3>
+              <ul class="solution-checklist">
+                <li><span class="check-icon">✓</span> Реализованный лидерский кейс</li>
+                <li><span class="check-icon">✓</span> Доступ к фонду инвестиций</li>
+                <li><span class="check-icon">✓</span> Стратегия в ТОП-100 вузов</li>
+                <li><span class="check-icon">✓</span> Окружение из сильных игроков</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO DAY -->
+    <section class="demoday section" id="process">
+      <div class="container">
+        <div class="demoday-card reveal">
+          <div class="section-badge" style="color: #fff;">Кульминация</div>
+          <h2 class="section-title" style="color: #fff;">Demo Day. Защита перед инвесторами.</h2>
+          <p class="section-subtitle centered" style="color: rgba(255,255,255,0.8); margin-bottom: 40px;">
+            До финала доходят не все. Здесь ты защищаешь проект перед экспертами — и именно здесь решается, кто получает инвестиции.
+          </p>
+          <div class="process-timeline" style="margin-top: 0; background: none;">
+            <div class="process-step" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+              <div class="process-step-number" style="color: #fff;">01</div>
+              <h4 style="color: #fff;">Питч проекта</h4>
+              <p style="color: rgba(255,255,255,0.6);">3 минуты, чтобы доказать жизнеспособность твоего кейса экспертам.</p>
+            </div>
+            <div class="process-step" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+              <div class="process-step-number" style="color: #fff;">02</div>
+              <h4 style="color: #fff;">Q&A сессия</h4>
+              <p style="color: rgba(255,255,255,0.6);">Жесткие вопросы от академических директоров и инвесторов.</p>
+            </div>
+            <div class="process-step" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+              <div class="process-step-number" style="color: #fff;">03</div>
+              <h4 style="color: #fff;">Вердикт</h4>
+              <p style="color: rgba(255,255,255,0.6);">Распределение инвестиций, грантов и офферов на сопровождение.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIZES -->
+    <section class="prizes section" id="prizes">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-badge">Награда за результат</div>
+          <h2 class="section-title prizes-title">Инвестиции в сильных</h2>
+          <p class="section-subtitle centered prizes-sub">
+            Лучшие выпускники Demo Day получают:
+          </p>
+        </div>
+
+        <div class="prizes-grid-new">
+
+          <!-- MacBook — Featured -->
+          <div class="prize-card-new prize-macbook reveal reveal-delay-1">
+            <div class="prize-glow-orb"></div>
+            <div class="prize-badge">Гран-при</div>
+            <div class="prize-visual-new">
+            <video class="macbook-img-new" autoplay loop muted playsinline>
+  <source src="macbook_prize.mp4" type="video/mp4">
+</video>  
+            </div>
+            <div class="prize-content-new">
+              <h3>MacBook Pro</h3>
+              <p>Твой главный инструмент для работы</p>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div class="prizes-right-col">
+
+            <!-- Money -->
+            <div class="prize-card-new prize-money reveal reveal-delay-2">
+              <div class="prize-glow-orb orb-gold"></div>
+              <div class="prize-badge badge-gold">Инвестиции</div>
+              <div class="prize-amount-display">
+                <span class="currency">$</span>
+                <span class="amount-counter" data-target="2000">0</span>
+              </div>
+              <p class="prize-money-desc">Прямые вложения в твой проект</p>
+            </div>
+
+            <!-- University -->
+            <div class="prize-card-new prize-uni reveal reveal-delay-3">
+              <div class="prize-glow-orb orb-blue"></div>
+              <div class="prize-badge badge-blue">Поступление</div>
+              <div class="prize-uni-display">
+                <div class="prize-uni-stars">
+                  <span>★</span><span>★</span><span>★</span>
+                </div>
+                <div class="prize-uni-text">ТОП-100</div>
+                <div class="prize-uni-sub">вузов мира</div>
+              </div>
+              <p class="prize-uni-desc">Полное сопровождение для финалистов</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-badge">Механика</div>
+          <h2 class="section-title">Как мы снимаем иллюзии</h2>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step reveal reveal-delay-1">
+            <div class="process-step-number">01</div>
+            <h4>Деконструкция бреда</h4>
+            <p>Разрушаем мифы о «престиже» и вытаскиваем то, что тебе реально интересно.</p>
+            <span class="step-duration">Неделя 1–2</span>
+          </div>
+          <div class="process-step reveal reveal-delay-2">
+            <div class="process-step-number">02</div>
+            <h4>Жесткая практика</h4>
+            <p>Решаешь задачи рынка. Понимаешь: твое или нет. Без теории.</p>
+            <span class="step-duration">Неделя 3–7</span>
+          </div>
+          <div class="process-step reveal reveal-delay-3">
+            <div class="process-step-number">03</div>
+            <h4>Сборка стратегии</h4>
+            <p>Вуз — это просто инструмент. Мы помогаем выбрать тот, что работает на тебя.</p>
+            <span class="step-duration">Неделя 8–12</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section class="cases section" id="cases">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-badge">Инсайты</div>
+          <h2 class="section-title">Те, кто вовремя проснулся</h2>
+        </div>
+
+        <div class="cases-grid">
+          <a href="https://youtu.be/IWG8bTMKyn0" target="_blank" data-video-id="IWG8bTMKyn0" class="case-card reveal reveal-delay-1 video-card-link" style="background-image: url('https://img.youtube.com/vi/IWG8bTMKyn0/maxresdefault.jpg');">
+            <div class="video-overlay"><div class="play-button"></div></div>
+          </a>
+          <a href="https://youtu.be/FB0Jwmdm7ZY" target="_blank" data-video-id="FB0Jwmdm7ZY" class="case-card reveal reveal-delay-2 video-card-link" style="background-image: url('https://img.youtube.com/vi/FB0Jwmdm7ZY/maxresdefault.jpg');">
+            <div class="video-overlay"><div class="play-button"></div></div>
+          </a>
+          <a href="https://youtu.be/Hj7SOU2GYpI" target="_blank" data-video-id="Hj7SOU2GYpI" class="case-card reveal reveal-delay-3 video-card-link" style="background-image: url('https://img.youtube.com/vi/Hj7SOU2GYpI/maxresdefault.jpg');">
+            <div class="video-overlay"><div class="play-button"></div></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENTORS -->
+<section class="trust section" id="trust">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-badge">Практики</div>
+      <h2 class="section-title">Твои менторы</h2>
+    </div>
+
+    <div class="mentors-duo reveal">
+
+      <div class="mentor-duo-card">
+        <div class="mentor-duo-photo-wrap">
+          <img src="mentor-saidkarim.jpg" alt="Саидкарим Турсунбаев" class="mentor-duo-photo mentor-duo-photo--crop" />
+        </div>
+        <div class="mentor-duo-info">
+          <p class="mentor-duo-tag">Академический стратег · Founder ENTRIUM</p>
+          <h3 class="mentor-duo-name">Саидкарим Турсунбаев</h3>
+          <ul class="mentor-highlights">
+            <li>Рекорд: 73 оффера от университетов мира для одного студента</li>
+            <li>Руководитель My Step (IELTS & SAT подготовка)</li>
+            <li>5+ лет опыта построения профилей для топ-вузов мира</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="guest-mentors-banner reveal">
+      <div class="guest-mentors-icon">✦</div>
+      <div class="guest-mentors-text">
+        <p class="guest-mentors-title">Гостевые менторы</p>
+        <p class="guest-mentors-sub">Эксперты и лидеры из компаний-партнёров — NazarX, UZ Combinator, First Global — проводят сессии и разборы проектов в рамках программы.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- RESULTS -->
+    <section class="results section" id="results">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-badge">Результаты</div>
+          <h2 class="section-title">Глобальное присутствие и победы</h2>
+          <p class="section-subtitle centered">
+            Наши студенты побеждают на международных аренах.
+          </p>
+        </div>
+
+        <div class="results-grid reveal">
+          <div class="result-item large">
+            <img src="student-bangkok.jpg" alt="Bangkok Global Round" />
+            <div class="result-caption">
+              <h4>Global Round, Bangkok</h4>
+              <p>Международный финал, Таиланд.</p>
+            </div>
+          </div>
+          <div class="result-item">
+            <img src="student-first-global.jpg" alt="FIRST Global Challenge" />
+            <div class="result-caption">
+              <h4>FIRST Global Challenge</h4>
+              <p>Мировая олимпиада, команда Узбекистана.</p>
+            </div>
+          </div>
+          <div class="result-item">
+            <img src="student-startup-battle.jpg" alt="Startup Battle Winners" />
+            <div class="result-caption">
+              <h4>Startup Battle — 2 место</h4>
+              <p>Центральноазиатский форум стартапов.</p>
+            </div>
+          </div>
+          <div class="result-item">
+            <img src="student-pleep-success.jpg" alt="Pleep Startup" />
+            <div class="result-caption">
+              <h4>Проект Pleep</h4>
+              <p>Защита проекта.</p>
+            </div>
+          </div>
+          <div class="result-item">
+            <img src="student-wsc-tashkent.jpg" alt="WSC Tashkent" />
+            <div class="result-caption">
+              <h4>WSC Tashkent Regional</h4>
+              <p>Региональный этап кубка.</p>
+            </div>
+          </div>
+          <div class="result-item">
+            <img src="student-global-round.jpg" alt="Global Round" />
+            <div class="result-caption">
+              <h4>Global Round Atmosphere</h4>
+              <p>Мировая арена.</p>
+            </div>
+          </div>
+          <div class="result-item large">
+            <img src="student-harvard.jpg" alt="Harvard Business School" />
+            <div class="result-caption">
+              <h4>Harvard Business School</h4>
+              <p>Кампус Harvard Business School.</p>
+            </div>
+          </div>
+          <div class="result-item">
+            <img src="student-medals.jpg" alt="Awards Ceremony" />
+            <div class="result-caption">
+              <h4>Церемония награждения</h4>
+              <p>Церемония награждения.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-badge">Стартапы</div>
+          <h2 class="section-title">От идеи до реального бизнеса</h2>
+          <p class="section-subtitle centered">
+            Реальные продукты, запущенные участниками программы.
+          </p>
+        </div>
+
+        <div class="projects-grid reveal">
+          <div class="project-card">
+            <div class="browser-header">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-tab">Pleep.ai</div>
+            </div>
+            <img src="project-pleep.jpg" alt="Pleep AI Sales Agent" class="project-img" />
+            <div class="project-info">
+              <h4>Pleep</h4>
+              <p>ИИ-агент для автоматизации продаж и квалификации лидов.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="browser-header">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-tab">Arma.education</div>
+            </div>
+            <img src="project-arma.jpg" alt="Arma AI Study Helper" class="project-img" />
+            <div class="project-info">
+              <h4>Arma</h4>
+              <p>Персональный ИИ-тьютор: карточки, квизы и подкасты для эффективной учёбы.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="browser-header">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-tab">Naviq.io</div>
+            </div>
+            <img src="project-naviq.jpg" alt="Naviq AI Hiring System" class="project-img" />
+            <div class="project-info">
+              <h4>Naviq</h4>
+              <p>Умный найм для стажировок: автооценка кандидатов и подбор для компаний.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+<section class="partners section" id="partners">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-badge">Экосистема</div>
+      <h2 class="section-title">Наши партнёры</h2>
+    </div>
+
+    <div class="collab-marquee-wrap">
+      <div class="collab-marquee">
+        <div class="collab-marquee-track">
+          <div class="collab-card"><img src="collab-nazarx.jpg" alt="Impact × NAZARX" /></div>
+          <div class="collab-card"><img src="collab-uzcombinator.jpg" alt="Impact × UZ Combinator" /></div>
+          <div class="collab-card"><img src="collab-firstglobal.jpg" alt="Impact × FIRST Global" /></div>
+          <div class="collab-card"><img src="collab-freshman-academy.jpg" alt="Impact × Freshman Academy" /></div>
+          <div class="collab-card"><img src="collab-tedxuwed.jpg" alt="Impact × TEDxUWED" /></div>
+          <!-- дублируем для бесшовного повтора -->
+          <div class="collab-card"><img src="collab-nazarx.jpg" alt="Impact × NAZARX" /></div>
+          <div class="collab-card"><img src="collab-uzcombinator.jpg" alt="Impact × UZ Combinator" /></div>
+          <div class="collab-card"><img src="collab-firstglobal.jpg" alt="Impact × FIRST Global" /></div>
+          <div class="collab-card"><img src="collab-freshman-academy.jpg" alt="Impact × Freshman Academy" /></div>
+          <div class="collab-card"><img src="collab-tedxuwed.jpg" alt="Impact × TEDxUWED" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- OFFER -->
+    <section class="offer section" id="offer">
+      <div class="container">
+        <div class="offer-card reveal">
+          <div class="offer-container">
+            <div class="offer-main">
+              <div class="section-badge" style="color: rgba(255,255,255,0.7); margin-left: 0;">Вход в программу</div>
+              <h2 class="section-title" style="color: #fff; text-align: left; margin-bottom: 24px;">Займи место в потоке</h2>
+
+              <div class="offer-price-block">
+                <div class="old-price presale-only">12 300 000 сум</div>
+                <div class="new-price" id="offer-price-value">9 840 000 сум</div>
+              </div>
+
+              <div class="offer-timer-compact presale-only reveal" id="offer-timer">
+                <div class="timer-label-small">До повышения цены осталось:</div>
+                <div class="timer" id="countdown-offer">
+                  <div class="timer-unit">
+                    <span class="timer-value" id="offer-days">00</span>
+                    <span class="timer-label">Дней</span>
+                  </div>
+                  <div class="timer-unit">
+                    <span class="timer-value" id="offer-hours">00</span>
+                    <span class="timer-label">Часов</span>
+                  </div>
+                  <div class="timer-unit">
+                    <span class="timer-value" id="offer-minutes">00</span>
+                    <span class="timer-label">Минут</span>
+                  </div>
+                  <div class="timer-unit">
+                    <span class="timer-value" id="offer-seconds">00</span>
+                    <span class="timer-label">Секунд</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="offer-actions">
+              <div class="offer-bonuses-list presale-only">
+                <div class="offer-bonus">✓ Шанс на инвестиции $2,000</div>
+                <div class="offer-bonus">✓ Доступ к закрытой экосистеме</div>
+                <div class="offer-bonus">✓ Гарантия поступления (для топ-выпускников)</div>
+                <div class="offer-bonus">✓ Участие в Demo Day</div>
+              </div>
+
+              <div class="offer-footer">
+                <div class="offer-spots presale-only">Осталось 8 мест из 20</div>
+                <a href="#" class="btn-primary" style="background: #fff; color: #1d1d1f; width: 100%; text-align: center;">Подать заявку на отбор</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section class="curriculum section" id="curriculum">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-badge">Дорожная карта</div>
+          <h2 class="section-title">12 недель трансформации</h2>
+          <p class="section-subtitle centered">От поиска себя до запуска международного проекта и поступления в топ-вуз.</p>
+        </div>
+
+        <div class="curriculum-phases">
+          <div class="curriculum-phase reveal">
+            <h3 class="phase-title"><span>01</span> Фундамент и Личность</h3>
+            <div class="phase-weeks">
+              <div class="week-card">
+                <span class="week-num">W1</span>
+                <h4>Самопознание и Миндсет</h4>
+                <p>Результат: Анализ сильных сторон и стратегия на 2 года.</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W2</span>
+                <h4>Уверенность и Публичность</h4>
+                <p>Результат: Первое публичное выступление (TED style).</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W3</span>
+                <h4>Лидерство и Проект</h4>
+                <p>Результат: Понимание структуры проекта и выбор идеи.</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W4</span>
+                <h4>Команда и Планирование</h4>
+                <p>Результат: Сформированная роль в команде и план развития.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="curriculum-phase reveal ai-focus">
+            <h3 class="phase-title"><span>02</span> Стратегия и AI-Мастерство</h3>
+            <div class="phase-weeks">
+              <div class="week-card">
+                <span class="week-num">W5</span>
+                <h4>Стратегия и Введение в AI</h4>
+                <p>Результат: Дорожная карта навыков 14+ и ChatGPT/Claude.</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W6</span>
+                <h4>AI Промпт-инжиниринг</h4>
+                <p>Результат: Набор инструментов для автоматизации учебы.</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W7</span>
+                <h4>Исследования и Стажировки</h4>
+                <p>Результат: MVP проекта с помощью ИИ и план стажировки.</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W8</span>
+                <h4>Карьера и Написание эссе</h4>
+                <p>Результат: Черновик эссе (Personal Statement) в топ-вуз.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="curriculum-phase reveal">
+            <h3 class="phase-title"><span>03</span> Личный бренд и Launch</h3>
+            <div class="phase-weeks">
+              <div class="week-card">
+                <span class="week-num">W9</span>
+                <h4>Личный бренд и Портфолио</h4>
+                <p>Результат: Готовый цифровой профиль лидера.</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W10</span>
+                <h4>Сторителлинг и Интервью</h4>
+                <p>Результат: Навыки самопрезентации перед приемной комиссией.</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W11</span>
+                <h4>Презентация и Проект</h4>
+                <p>Результат: Финальный питч и проект с реальным Impact.</p>
+              </div>
+              <div class="week-card">
+                <span class="week-num">W12</span>
+                <h4>Стратегия 1:1 и Demo Day</h4>
+                <p>Результат: Сертификат, Demo Day и план на 2 года.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Impact Admissions. Выбор без иллюзий. <a href="enrollment.html" class="enrollment-link">Таблица набора</a></p>
+    </div>
+  </footer>
+
+  <div class="floating-cta presale-only" id="floating-cta">
+    <button class="floating-cta-btn" onclick="document.getElementById('offer').scrollIntoView({behavior:'smooth'})">
+      Перестать терять время — Pre-sale до 25 апреля
+    </button>
+  </div>
+
+  <div class="video-modal" id="video-modal">
+    <div class="video-modal-overlay" id="video-modal-overlay"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="video-modal-close" aria-label="Закрыть">×</button>
+      <div class="video-modal-iframe-container" id="video-modal-iframe-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
